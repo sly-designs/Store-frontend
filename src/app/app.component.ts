@@ -2,10 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-
-  `,
-  styles: []
+  template: `./app.component.html `,
 })
 export class AppComponent {
   title = 'store';
