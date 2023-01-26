@@ -20,6 +20,7 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsHeaderComponent } from './pages/components/products-header/products-header.component';
+import { FiltersComponent } from './pages/components/filters/filters.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ProductsHeaderComponent } from './pages/components/products-header/prod
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ProductsHeaderComponent
+    ProductsHeaderComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
