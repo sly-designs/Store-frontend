@@ -12,8 +12,8 @@ class="min-h-full max-w-7x1 mx-auto border-x"
          [cols]="cols"
          [rowHeight]="rowHeight"
          >
-         <mat-grid-tile>
-            <app-product-box></app-product-box>
+         <mat-grid-tile >
+            <app-product-box [fullWidthMode]="cols===1"></app-product-box>
          </mat-grid-tile>
 
        </mat-grid-list>
