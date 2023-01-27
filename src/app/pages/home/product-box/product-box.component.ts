@@ -2,13 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-product-box',
-  template: `
-    <p>
-      product-box works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './product-box.component.html',
 })
 export class ProductBoxComponent {
 
