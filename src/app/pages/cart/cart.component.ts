@@ -12,7 +12,7 @@ export class CartComponent implements OnInit{
     name: 'snickers',
     price: 150,
     quantity: 1,
-    id: 1,
+    id: 1
   }]};
 
   dataSource: Array<CartItem> = [];
