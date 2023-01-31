@@ -32,7 +32,7 @@
         <ng-container matColumnDef="total">
             <th mat-header-cell *matHeaderCellDef>Total</th>
             <td mat-cell *matCellDef="let element">
-                <td mat-cell *matCellDef="let element">{{element.total}}</td>
+                <td mat-cell *matCellDef="let element">{{(element.quantity * element.price) | currency }}</td>
             <td mat-footer-cell *matFooterCellDef>
                 <span class="font-bold py-5 block">
                     {{getTotal(cart.items) | currency}}
@@ -46,11 +46,13 @@
                 </button>
             </th>
             <td mat-cell *matCellDef="let element">
-                <td mat-cell *matCellDef="let element">{{element.total}}</td>
+                <button mat-mini-fab color="warn" 
+                class="float-right">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </td>
             <td mat-footer-cell *matFooterCellDef>
-                <span class="font-bold py-5 block">
-                    {{getTotal(cart.items) | currency}}
-                </span>
+             
             </td>  
         </ng-container>
 
