@@ -7,9 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProductBoxComponent implements OnInit{
  
  @Input() fullWidthMode = false;
+  product: Product
+
   constructor() {}
 
   ngOnInit(): void {
     
+  }
+
+  onAddToCart(): void {
+
   }
 }
