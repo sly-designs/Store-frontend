@@ -9,7 +9,8 @@ import { Cart, CartItem } from '../models/cart.model';
 export class CartService {
   cart = new BehaviorSubject<Cart>({ items: []});
 
-  constructor(private_snackBar: MatSnackBar) { }
+
+  constructor(private _snackBar: MatSnackBar) { }
 
   addToCart(item: CartItem): void {
     const items = [...this.cart.value.items];
@@ -24,6 +25,7 @@ export class CartService {
 
     this.cart.next({ items });
     this._snackBar.open('1 item added to cart.', 'ok', {duration: 3000});
+    console.log(this.cart.value);
   }
 
 }
