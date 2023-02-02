@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Cart } from 'src/app/models/cart.model';
+import { Cart, CartItem } from 'src/app/models/cart.model';
 
 @Component({
   selector: 'app-header',
@@ -23,5 +23,9 @@ export class HeaderComponent {
   }
 
   constructor() {}
+
+  getTotal(items: Array<CartItem>): number {
+    
+  }
 
 }
