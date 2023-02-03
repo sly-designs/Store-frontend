@@ -41,4 +41,10 @@ export class CartService {
         
     }
 
+    removeFromCart(item: CartItem): void {
+      const filteredItems = this.cart.value.items.filter(
+        (_item) => _item.id !== item.id
+      );
+    }
+
 }
