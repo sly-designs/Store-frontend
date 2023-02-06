@@ -20,10 +20,12 @@ export class ProductsHeaderComponent implements OnInit{
 
   onSortUpdated(newSort: string): void {
       this.sort = newSort;
+      this.sortChange.emit(newSort);
   }
 
   onItemsUpdated(count: number): void {
     this.itemsShowCount = count;
+    this.itemsCountChange.emit(count);
   }
 
   onColumnsUpdated(colsNum: number): void {
