@@ -57,4 +57,8 @@ export class CartComponent implements OnInit{
     this.cartService.removeQuantity(item);
   }
 
+  onCheckout(): void {
+    
+  }
+
 }
