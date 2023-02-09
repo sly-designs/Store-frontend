@@ -13,7 +13,14 @@ const stripes = require("stripe")("sk_test_51MYutsLjlbwfYKGxWN5mcukXLVt12jNqF8BJ
 app.post("/checkout", async( req, res, next) => {
     try {
         const session = await stripes.checkout.sessions.create({
-
+            line_items: req.body.items.map((item) => ({
+                currency: 'usd',
+                product_data: {
+                    name: item.name,
+                    images: [item.product]
+                },
+                unit_amount: item.price
+            }))
         });
     }catch (error) {
 
