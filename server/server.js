@@ -14,13 +14,15 @@ app.post("/checkout", async( req, res, next) => {
     try {
         const session = await stripes.checkout.sessions.create({
             line_items: req.body.items.map((item) => ({
-                currency: 'usd',
+                currency: "usd",
                 product_data: {
                     name: item.name,
                     images: [item.product]
                 },
-                unit_amount: item.price
-            }))
+                unit_amount: item.price * 100
+            })),
+            mode: "payment",
+            success_url: ""
         });
     }catch (error) {
 
