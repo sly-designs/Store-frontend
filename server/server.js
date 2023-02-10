@@ -14,12 +14,15 @@ app.post("/checkout", async( req, res, next) => {
     try {
         const session = await stripes.checkout.sessions.create({
             line_items: req.body.items.map((item) => ({
-                currency: "usd",
+                price_data: {
+                currency: 'usd',
                 product_data: {
                     name: item.name,
-                    images: [item.product]
+                    images: [items.product]
                 },
-                unit_amount: item.price * 100
+                unit_amount: item.price * 100,
+            },
+            quantity: item.quantity,
             })),
             mode: "payment",
             success_url: "http://localhost:4242/success.html",
